@@ -13,8 +13,3 @@ $(document).ready(function () {
     tagsPosition: "top",
   });
 });
-
-// LAZY LOAD : LOZAD.JS
-
-const observer = lozad(".lozad");
-observer.observe();

@@ -48,6 +48,7 @@
     tagsPosition: "bottom",
     navigation: true,
   };
+
   $.fn.mauGallery.listeners = function (options) {
     $(".gallery-item").on("click", function () {
       if (options.lightBox && $(this).prop("tagName") === "IMG") {
@@ -58,10 +59,16 @@
     });
 
     $(".gallery").on("click", ".nav-link", $.fn.mauGallery.methods.filterByTag);
-    $(".gallery").on("click", ".mg-prev", () =>
+    $(".gallery").on(
+      "click",
+      ".mg-prev",
+      (e) => console.log("preview"),
       $.fn.mauGallery.methods.prevImage(options.lightboxId)
     );
-    $(".gallery").on("click", ".mg-next", () =>
+    $(".gallery").on(
+      "click",
+      ".mg-next",
+      () => console.log("next"),
       $.fn.mauGallery.methods.nextImage(options.lightboxId)
     );
   };

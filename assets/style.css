@@ -105,9 +105,6 @@ a:hover{
 	font-size: 14px;
 }
 
-#gallery {
-	/*	min-height: 100vh; */
-}
 .title{
 	text-align: center;
 	padding-block: 2em;
@@ -348,6 +345,11 @@ input[type="submit"] {
 }
 
 @media all and (max-width: 650px) {
+	img{
+		max-width: 400px;
+		max-height: 300px;
+	}
+
 	.top-header {
 		flex-direction: column;
 		padding-inline: 0;
